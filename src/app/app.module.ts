@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { LoginComponent } from './pages/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,7 +14,6 @@ import { ChatroomListComponent } from './pages/chat/components/chatroom-list/cha
 import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-title-bar/chatroom-title-bar.component';
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
-
 
 @NgModule({
   declarations: [
@@ -27,13 +26,14 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
     ChatroomListComponent,
     ChatroomTitleBarComponent,
     ChatMessageComponent,
-    ChatroomWindowComponent
+    ChatroomWindowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
