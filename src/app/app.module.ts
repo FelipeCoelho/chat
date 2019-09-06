@@ -14,6 +14,7 @@ import { ChatroomListComponent } from './pages/chat/components/chatroom-list/cha
 import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-title-bar/chatroom-title-bar.component';
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
+import { AlertService } from './services/alert.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AlertService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
