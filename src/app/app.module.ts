@@ -15,6 +15,9 @@ import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-titl
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
 import { AlertService } from './services/alert.service';
+import { NgxLoadingModule } from 'ngx-loading';
+import { LoadingService } from './services/loading.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,10 +37,13 @@ import { AlertService } from './services/alert.service';
     AppRoutingModule,
     AlertModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxLoadingModule
   ],
   providers: [
-    AlertService
+    AlertService,
+    LoadingService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
