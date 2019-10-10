@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (this.loginForm.valid) {
       this.loadingService.isLoading.next(true);
       const { email, password } = this.loginForm.value;
-      // console.log(`Email: ${email}, Password: ${password}`);
       this.subscriptions.push(
         this.auth.login(email, password).subscribe(success => {
           if (success) {
@@ -55,7 +54,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         })
       );
     } else {
-      const failedLoginAlert = new Alert('Your email or password were inavalid', AlertType.Danger)
+      const failedLoginAlert = new Alert('Invalid email/password combination, try again', AlertType.Danger)
       this.loadingService.isLoading.next(false);
       this.alertService.alerts.next(failedLoginAlert)
     }
